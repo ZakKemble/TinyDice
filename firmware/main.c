@@ -68,11 +68,13 @@ static uint8_t rollDelays[] = {
 
 // https://www.avrfreaks.net/forum/random-number-generation-0
 // https://en.wikipedia.org/wiki/Xorshift
-// https://github.com/edrosten/8bit_rng/blob/master/rng-4261412736.c
 // https://en.wikipedia.org/wiki/Linear_congruential_generator
 //uint8_t val = rand() / (RAND_MAX / 6 + 1);
 static uint8_t genRandom(void)
 {
+	// Source: https://github.com/edrosten/8bit_rng/blob/master/rng-4261412736.c
+	// Copyright Edward Rosten 2008--2013.
+
 	static uint8_t x;
 	static uint8_t y;
 	static uint8_t z;
